@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مشاهدة دروس النحو | منصة العربية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>📘 دروس الكورس</h3>
+    <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/mH6zocPZl7M')">الدرس 1: الكلمة: اسم- فعل- حرف</div>
+    <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/mH6zocPZl7M')">الدرس 2: أنواع الفعل ( ماضي - مضارع - أمر )</div>
+    <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/N3TXYA5cToU')">الدرس 3: أنواع الجمل ( إسمية - فعليه )</div>
+    <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/GGnPaJFO6UE')">الدرس 4:  المفاعيل ( مفعول به - مفعول مطلق - مفعول لأجله - ظرف الزمان و المكان )</div>
+    <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/mH6zocPZl7M')">الدرس 5: جميع أحوال الفعل المضارع </div>
+    <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/N3TXYA5cToU')">الدرس 6: النواسخ ( الحروف - الأفعال )</div>
+    <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/GGnPaJFO6UE')">الدرس 7: الميزان الصرفي</div>
+      <div class="lesson-link" onclick="loadVideo('https://www.youtube.com/embed/GGnPaJFO6UE')">الدرس 7: العلامات الأصليه و الفرعيه في الاعراب</div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <h1>🎥 مشاهدة الدرس</h1>
+    <div class="video-box" id="video-container">
+      <iframe id="lesson-video" src="https://www.youtube.com/embed/GGnPaJFO6UE" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+<script>
+  function loadVideo(url) {
+    // تغيير رابط الفيديو
+    const videoFrame = document.getElementById("lesson-video");
+    videoFrame.src = url;
+
+    // إزالة الكلاس من كل الدروس
+    const lessons = document.querySelectorAll(".lesson-link");
+    lessons.forEach(link => link.classList.remove("active-lesson"));
+
+    // إضافة الكلاس للدرس الحالي
+    event.target.classList.add("active-lesson");
+  }
+</script>
+
+</body>
+</html>

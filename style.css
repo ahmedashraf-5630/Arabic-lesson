@@ -1,0 +1,356 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.lesson-link.active-lesson {
+  background-color: #264653;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 1rem 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffb703;
+}
+
+.links a {
+  margin-left: 2vw;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 8vh 10vw;
+  background: linear-gradient(to left, #fff7e6, #fefcf8);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero span {
+  color: #f4a261;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.cta-btn {
+  background-color: #ffb703;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #f4a261;
+}
+
+/* Courses Section */
+.courses {
+  padding: 5vh 8vw;
+}
+
+.courses h2 {
+  text-align: center;
+  margin-bottom: 4vh;
+  font-size: 2rem;
+  color: #264653;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.cards a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #2a9d8f;
+  margin-bottom: 1vh;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #ffb703;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5vh;
+}
+
+/* 📱 Media Query */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero {
+    padding: 6vh 5vw;
+    text-align: right;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: none;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin-right: 0;
+    padding: 2vh 5vw;
+  }
+
+  .video-box {
+    height: 40vh;
+  }
+}
+
+/* 🔠 صفحات الدروس */
+.course-hero {
+  background: linear-gradient(to left, #fef9f2, #fff8e6);
+  padding: 8vh 10vw;
+  text-align: center;
+}
+
+.course-content {
+  padding: 5vh 8vw;
+  background-color: #fff;
+}
+
+.course-description {
+  margin-bottom: 3rem;
+}
+
+.course-description h2,
+.course-lesson-list h2 {
+  color: #264653;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.course-description ul {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 2;
+}
+
+.course-description p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.course-lesson-list ol {
+  padding-right: 1.5rem;
+  color: #333;
+  line-height: 2;
+}
+
+.enroll-box {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* 🎥 صفحة الفيديو والدروس الجانبية */
+.sidebar {
+  width: 20vw;
+  background-color: #f4f4f4;
+  border-left: 1px solid #ddd;
+  padding: 2vh 1vw;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.05);
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.sidebar h3 {
+  margin-bottom: 1rem;
+  color: #264653;
+}
+
+.lesson-link {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.lesson-link:hover {
+  background-color: #e0f4ff;
+}
+
+.main-content {
+  margin-right: 22vw;
+  padding: 4vh 4vw;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.main-content h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.video-box {
+  width: 100%;
+  height: 60vh;
+  background-color: #000;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid #ddd;
+    box-shadow: none;
+    padding: 2vh 5vw;
+    margin-bottom: 2vh;
+  }
+
+  .main-content {
+    margin-right: 0;
+    padding: 2vh 5vw;
+  }
+
+  .video-box {
+    height: 40vh;
+  }
+
+  .lesson-link {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .main-content h1 {
+    font-size: 1.3rem;
+  }
+
+  iframe {
+    border-radius: 6px;
+  }
+}
+
